@@ -4,39 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSRG Community</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <img src="logo.png" alt="CSRG Community" class="logo">
         <h1>Bienvenue sur CSRG Community</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#fonctionnement">Fonctionnement</a></li>
+                <li><a href="#inscription">S'inscrire</a></li>
+                <li><a href="#publicite">Publicité</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="fonctionnement">
-        <h2>Comment fonctionne CSRG Community ?</h2>
-        <p>CSRG Community est une communauté qui crée et partage des jeux Roblox. Nous développons des expériences uniques et amusantes pour tous les joueurs !</p>
+    <section id="accueil">
+        <h2>CSRG Community</h2>
+        <p>Créez et explorez des jeux Roblox avec notre communauté dynamique !</p>
     </section>
 
-    <section class="inscription">
-        <h2>Inscrivez-vous à notre communauté</h2>
-        <form>
-            <input type="text" placeholder="Votre pseudo Roblox" required>
-            <input type="email" placeholder="Votre email" required>
+    <section id="fonctionnement">
+        <h2>Comment ça fonctionne ?</h2>
+        <p>CSRG Community vous permet de créer, partager et jouer à des jeux sur Roblox.</p>
+        <ul>
+            <li>💡 Apprenez à coder des jeux Roblox</li>
+            <li>🛠️ Partagez vos créations</li>
+            <li>🎮 Jouez avec la communauté</li>
+        </ul>
+    </section>
+
+    <section id="inscription">
+        <h2>Inscription</h2>
+        <form id="signup-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
             <button type="submit">S'inscrire</button>
         </form>
+        <p id="message"></p>
     </section>
 
-    <section class="publicite">
-        <h2>Découvrez notre jeu Roblox</h2>
-        <p>Vous pouvez déjà tester mon obby en cliquant sur ce lien :</p>
-        <a href="https://www.roblox.com/fr/games/17819987677/Obby-easy-to-almost-impossible-and-troll" target="_blank">
-            🔗 Jouer à mon jeu Roblox
-        </a>
-        <p>(Téléchargez Roblox avant de cliquer sur ce lien)</p>
+    <section id="publicite">
+        <h2>Publicité</h2>
+        <div class="pub">
+            <p>🔔 Rejoignez notre Discord pour plus d'infos !</p>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 CSRG Community - Tous droits réservés</p>
+        <p>&copy; 2025 CSRG Community. Tous droits réservés.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
