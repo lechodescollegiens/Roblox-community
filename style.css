@@ -1,64 +1,92 @@
+/* --- Styles généraux --- */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     background-color: #f4f4f4;
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #004080;
-    color: white;
-    padding: 20px;
-}
-
-.logo {
-    width: 120px;
-    display: block;
-    margin: 0 auto;
-}
-
-h1, h2 {
-    color: #004080;
-}
-
-section {
+/* --- Conteneur principal --- */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
     background: white;
     padding: 20px;
-    margin: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 
-input {
+/* --- Logo --- */
+.logo {
+    width: 150px;
     display: block;
-    margin: 10px auto;
-    padding: 10px;
+    margin: auto;
+}
+
+/* --- Titres --- */
+h1 {
+    color: #222;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #444;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/* --- Formulaire d'inscription --- */
+.form-group {
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"] {
     width: 80%;
     max-width: 300px;
-}
-
-button {
-    background-color: #004080;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.publicite a {
-    display: inline-block;
-    background: #ffcc00;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-footer {
-    margin-top: 20px;
-    background: #004080;
+button {
+    background-color: #007bff;
     color: white;
-    padding: 10px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Lien Roblox --- */
+.roblox-link {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.roblox-link a {
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.roblox-link a:hover {
+    text-decoration: underline;
+}
+
+/* --- Pied de page --- */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
 }
