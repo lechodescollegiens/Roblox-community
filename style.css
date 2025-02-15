@@ -1,73 +1,65 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
 header {
-    background: #0044cc;
+    background-color: #004aad;
     color: white;
-    padding: 15px;
-    text-align: center;
+    padding: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.logo {
+    width: 150px;
+    height: auto;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.mini-logo {
+    width: 80px;
+    height: auto;
+    margin-top: 10px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+h1, h2 {
+    color: #222;
 }
 
 section {
-    padding: 40px;
-    text-align: center;
-}
-
-form {
-    background: white;
     padding: 20px;
-    max-width: 300px;
-    margin: auto;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+form input, form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
 }
 
 button {
-    background: #0044cc;
+    background-color: #004aad;
     color: white;
-    padding: 10px;
     border: none;
-    width: 100%;
+    padding: 10px;
     cursor: pointer;
     border-radius: 5px;
 }
 
 button:hover {
-    background: #002a80;
+    background-color: #003080;
 }
 
-.pub {
-    background: yellow;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
 }
