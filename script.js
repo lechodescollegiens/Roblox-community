@@ -1,15 +1,14 @@
-document.getElementById("signup-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Empêche le rechargement de la page
-
-    let name = document.getElementById("name").value;
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let username = document.getElementById("username").value;
     let email = document.getElementById("email").value;
-    let message = document.getElementById("message");
-
-    if (name && email) {
-        message.style.color = "green";
-        message.innerHTML = "✅ Inscription réussie, bienvenue " + name + " !";
+    
+    if(username && email) {
+        document.getElementById("message").textContent = "Merci pour votre inscription, " + username + " !";
+        document.getElementById("message").style.color = "green";
     } else {
-        message.style.color = "red";
-        message.innerHTML = "❌ Veuillez remplir tous les champs.";
+        document.getElementById("message").textContent = "Veuillez remplir tous les champs.";
+        document.getElementById("message").style.color = "red";
     }
 });
