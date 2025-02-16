@@ -1,10 +1,11 @@
 /* --- Styles généraux --- */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #0a0f44, #00aaff); /* Dégradé bleu foncé -> turquoise */
     text-align: center;
     margin: 0;
     padding: 0;
+    color: white; /* Texte blanc pour un bon contraste */
 }
 
 /* --- Conteneur principal --- */
@@ -17,6 +18,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
+    color: black; /* Texte en noir à l'intérieur */
 }
 
 /* --- Logo --- */
@@ -28,13 +30,13 @@ body {
 
 /* --- Titres --- */
 h1 {
-    color: #222;
+    color: #fff; /* Blanc pour bien ressortir sur le fond */
     font-size: 28px;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: #444;
+    color: #ddd;
     font-size: 22px;
     margin-top: 20px;
 }
@@ -75,7 +77,7 @@ button:hover {
 }
 
 .roblox-link a {
-    color: blue;
+    color: yellow;
     font-weight: bold;
     text-decoration: none;
 }
@@ -88,5 +90,5 @@ button:hover {
 .footer {
     margin-top: 20px;
     font-size: 14px;
-    color: #666;
+    color: #ddd;
 }
