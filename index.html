@@ -14,18 +14,21 @@
 
     <section class="fonctionnement">
         <h2>Comment fonctionne CSRG Community ?</h2>
-        <p>CSRG Community est une communauté qui crée , code et partage des jeux Roblox.
+        <p>CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
         Vous pouvez participer au projet en vous inscrivant en dessous.
-            Nous vous enverrons sûrement un mail grâce à l'adresse mail que vous nous fournissez en vous inscrivant au projet.</p>
+        Nous vous enverrons sûrement un mail grâce à l'adresse mail que vous nous fournissez en vous inscrivant au projet.</p>
     </section>
 
     <section class="inscription">
         <h2>Inscrivez-vous au projet !</h2>
-        <form action="https://alex6.fwh.is/submit.php" method="POST">
+        <!-- Ajout d'un ID au formulaire -->
+        <form id="monFormulaire">
             <input type="text" name="pseudo" placeholder="Votre pseudo Roblox" required>
             <input type="email" name="email" placeholder="Votre email" required>
             <button type="submit">Participer au projet !</button>
         </form>
+        <!-- Ajout d'un div pour afficher le message -->
+        <div id="message"></div>
     </section>
 
     <section class="publicite">
@@ -40,22 +43,25 @@
     <footer>
         <p>© 2025 CSRG Community</p>
     </footer>
+
+    <!-- Script AJAX corrigé -->
     <script>
-document.getElementById("monFormulaire").addEventListener("submit", function(event){
-    event.preventDefault(); // Empêche le rechargement de la page
+    document.getElementById("monFormulaire").addEventListener("submit", function(event){
+        event.preventDefault(); // Empêche le rechargement de la page
 
-    var formData = new FormData(this);
+        var formData = new FormData(this);
 
-    fetch("https://alex6.fwh.is/submit.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text()) // Récupère la réponse du serveur
-    .then(data => {
-        document.getElementById("message").innerHTML = data; // Affiche le message sans recharger la page
-    })
-    .catch(error => console.error("Erreur:", error));
-});
-</script>
+        fetch("https://alex6.fwh.is/submit.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text()) // Récupère la réponse du serveur
+        .then(data => {
+            document.getElementById("message").innerHTML = data; // Affiche le message sans recharger la page
+        })
+        .catch(error => console.error("Erreur:", error));
+    });
+    </script>
+
 </body>
 </html>
