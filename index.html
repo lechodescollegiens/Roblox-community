@@ -16,7 +16,7 @@
         <h2>Comment fonctionne CSRG Community ?</h2>
         <p>CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
         Vous pouvez participer au projet en vous inscrivant ci-dessous.
-        Nous vous enverrons sûrement un mail grâce à l'adresse fournie.</p>
+        Nous vous enverrons sûrement un mail grâce à l'adresse que vous nous fournissez.</p>
     </section>
 
     <section class="inscription">
@@ -26,12 +26,12 @@
             <input type="email" name="email" placeholder="Votre email" required>
             <button type="submit">Participer au projet !</button>
         </form>
-        <div id="message"></div> <!-- Affichage du message de réussite ou d'erreur -->
+        <div id="message"></div> <!-- Message de confirmation ou d'erreur -->
     </section>
 
     <section class="publicite">
         <h2>Découvrez mon jeu Roblox</h2>
-        <p>Vous pouvez déjà tester mon obby en cliquant sur ce lien :</p>
+        <p>Testez mon obby en cliquant ici :</p>
         <a href="https://www.roblox.com/fr/games/17819987677/Obby-easy-to-almost-impossible-and-troll" target="_blank">
             🔗 Jouer à mon jeu Roblox
         </a>
@@ -43,25 +43,21 @@
     </footer>
 
     <script>
-        document.getElementById("monFormulaire").addEventListener("submit", function(event){
-            event.preventDefault(); // Empêche le rechargement de la page
+    document.getElementById("monFormulaire").addEventListener("submit", function(event){
+        event.preventDefault(); // Empêche le rechargement de la page
 
-            var formData = new FormData(this);
+        var formData = new FormData(this);
 
-            fetch("https://alex6.fwh.is/submit.php", { // Remplace par ton URL de traitement PHP
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text()) // Attend la réponse du serveur
-            .then(data => {
-                console.log("Réponse du serveur :", data); // Affiche la réponse dans la console
-                document.getElementById("message").innerHTML = data; // Affiche la réponse sur la page
-            })
-            .catch(error => {
-                console.error("Erreur:", error);
-                document.getElementById("message").innerHTML = "Une erreur est survenue.";
-            });
-        });
+        fetch("submit.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text()) // Récupère la réponse du serveur
+        .then(data => {
+            document.getElementById("message").innerHTML = data; // Affiche le message
+        })
+        .catch(error => console.error("Erreur:", error));
+    });
     </script>
 </body>
 </html>
