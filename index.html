@@ -40,5 +40,22 @@
     <footer>
         <p>© 2025 CSRG Community</p>
     </footer>
+    <script>
+document.getElementById("monFormulaire").addEventListener("submit", function(event){
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    var formData = new FormData(this);
+
+    fetch("https://alex6.fwh.is/submit.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text()) // Récupère la réponse du serveur
+    .then(data => {
+        document.getElementById("message").innerHTML = data; // Affiche le message sans recharger la page
+    })
+    .catch(error => console.error("Erreur:", error));
+});
+</script>
 </body>
 </html>
