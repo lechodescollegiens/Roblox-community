@@ -16,13 +16,12 @@
         <h2>Comment fonctionne CSRG Community ?</h2>
         <p>CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
         Vous pouvez participer au projet en vous inscrivant ci-dessous.
-        Nous vous enverrons sûrement un mail grâce à l'adresse que vous nous fournissez.
-        </p>
+        Nous vous enverrons sûrement un mail grâce à l'adresse que vous nous fournissez.</p>
     </section>
-    
-    <h2> ⚠ Vous devez disposer d'un ordinateur chez vous pour installer Roblox Studio.</h2>
+
+    <h2>⚠ Vous devez disposer d'un ordinateur pour installer Roblox Studio.</h2>
     <h3>⚠ Le site est nouveau et il peut y avoir des bugs lors de l'inscription.</h3>
-    
+
     <section class="inscription">
         <h2>Inscrivez-vous au projet !</h2>
         <form id="monFormulaire">
@@ -47,21 +46,22 @@
     </footer>
 
     <script>
-        document.getElementById("monFormulaire").addEventListener("submit", function(event){
-            event.preventDefault(); // Empêche le rechargement de la page
+    document.getElementById("monFormulaire").addEventListener("submit", function(event){
+        event.preventDefault(); // Empêche le rechargement de la page
 
-            var formData = new FormData(this);
+        var formData = new FormData(this);
 
-            fetch("submit.php", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text()) // Récupère la réponse du serveur
-            .then(data => {
-                document.getElementById("message").innerHTML = data; // Affiche le message
-            })
-            .catch(error => console.error("Erreur:", error));
-        });
+        fetch("https://alex6.fwh.is/submit.php", { // Met ton URL PHP ici
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text()) // Récupère la réponse du serveur
+        .then(data => {
+            document.getElementById("message").innerHTML = data; // Affiche le message
+        })
+        .catch(error => console.error("Erreur:", error));
+    });
     </script>
+
 </body>
 </html>
