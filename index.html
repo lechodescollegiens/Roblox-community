@@ -16,10 +16,11 @@
         <h2>Comment fonctionne CSRG Community ?</h2>
         <p>CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
         Vous pouvez participer au projet en vous inscrivant ci-dessous.
-        Nous vous enverrons sûrement un mail grâce à l'adresse que vous nous fournissez.</p>
+        Nous vous enverrons sûrement un mail grâce à l'adresse que vous nous fournissez.
+        </p>
     </section>
-
-    <h2>⚠ Vous devez disposer d'un ordinateur pour installer Roblox Studio.</h2>
+    
+    <h2>⚠ Attention ! Vous devez disposer d'un ordinateur chez vous pour installer Roblox Studio.</h2>
     <h3>⚠ Le site est nouveau et il peut y avoir des bugs lors de l'inscription.</h3>
 
     <section class="inscription">
@@ -51,17 +52,20 @@
 
         var formData = new FormData(this);
 
-        fetch("https://alex6.fwh.is/submit.php", { // Met ton URL PHP ici
+        fetch("https://alex6.fwh.is/submit.php", { // Chemin du script PHP
             method: "POST",
             body: formData
         })
-        .then(response => response.text()) // Récupère la réponse du serveur
+        .then(response => response.text()) // Convertit la réponse en texte
         .then(data => {
-            document.getElementById("message").innerHTML = data; // Affiche le message
+            console.log("Réponse du serveur :", data); // Affiche la réponse dans la console
+            document.getElementById("message").innerHTML = "<p>" + data + "</p>"; // Affiche le message
         })
-        .catch(error => console.error("Erreur:", error));
+        .catch(error => {
+            console.error("Erreur:", error);
+            document.getElementById("message").innerHTML = "<p>❌ Une erreur est survenue.</p>";
+        });
     });
     </script>
-
 </body>
 </html>
