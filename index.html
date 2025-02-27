@@ -25,12 +25,11 @@
 
     <section class="inscription">
         <h2>Inscrivez-vous au projet !</h2>
-        <form id="monFormulaire">
-            <input type="text" name="pseudo" placeholder="Votre pseudo Roblox" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <button type="submit">Participer au projet !</button>
-        </form>
-        <div id="message"></div> <!-- Message de confirmation ou d'erreur -->
+        <!-- Le formulaire est supprimé ici -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScJOJa170GUiIeh7Jv6-Lkg-cT0SwTEcPnkQzy7pZk1d91hdA/viewform?usp=header" target="_blank">
+            <button>Participer au projet !</button>
+        </a>
+        <!-- Lien vers le formulaire Google Forms -->
     </section>
 
     <section class="publicite">
@@ -45,27 +44,5 @@
     <footer>
         <p>© 2025 CSRG Community</p>
     </footer>
-
-    <script>
-    document.getElementById("monFormulaire").addEventListener("submit", function(event){
-        event.preventDefault(); // Empêche le rechargement de la page
-
-        var formData = new FormData(this);
-
-        fetch("connexion.php", { // Changer ici vers ton fichier PHP local
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text()) // Convertit la réponse en texte
-        .then(data => {
-            console.log("Réponse du serveur :", data); // Affiche la réponse dans la console
-            document.getElementById("message").innerHTML = "<p>" + data + "</p>"; // Affiche le message
-        })
-        .catch(error => {
-            console.error("Erreur:", error);
-            document.getElementById("message").innerHTML = "<p>❌ Une erreur est survenue.</p>";
-        });
-    });
-    </script>
 </body>
 </html>
