@@ -13,12 +13,12 @@
     </header>
 
     <section class="fonctionnement">
-        <h2>Comment fonctionne CSRG Community ? ( lisez ! (important !))</h2>
+        <h2>Comment fonctionne CSRG Community ? (lisez ! (important !))</h2>
         <p>CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
         Vous pouvez participer au projet en vous inscrivant ci-dessous.
-        Nous vous enverrons un mail grâce à l'adresse mail que vous nous fournissez. Si vous n'avez pas d'adresse mail , mettez votre numéro de téléphone dans la case adresse email.
-        Bien évidemment , nous partagerons les robux collectés. 
-        ⚠ Pour éviter tout malentendu , sachez que CSRG est une mini-marque. Ne cherchez pas un groupe roblox s'appelant CSRG Community ! 😂
+        Nous vous enverrons un mail grâce à l'adresse mail que vous nous fournissez. Si vous n'avez pas d'adresse mail, mettez votre numéro de téléphone dans la case adresse email.
+        Bien évidemment, nous partagerons les robux collectés. 
+        ⚠ Pour éviter tout malentendu, sachez que CSRG est une mini-marque. Ne cherchez pas un groupe Roblox s'appelant CSRG Community ! 😂
         </p>
     </section>
     
@@ -26,28 +26,53 @@
 
     <section class="inscription">
         <h2>Inscrivez-vous au projet !</h2>
-        <!-- Le formulaire est supprimé ici -->
+        
+        <!-- Bouton pour ouvrir les règles -->
+        <button onclick="ouvrirRegles()">Règles de CSRG Community</button>
+
+        <!-- Fenêtre modale (initialement masquée) -->
+        <div id="fenetreRegles" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; border: 1px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+            <h2>Règles de CSRG Community</h2>
+            <p>Voici les règles à suivre pour participer à CSRG Community :</p>
+            <ul>
+                <li>Respectez les autres membres de la communauté.</li>
+                <li>Participez activement aux projets.</li>
+                <li>Partagez les gains équitablement selon les accords convenus.</li>
+                <li>Ne pas utiliser le contenu de CSRG Community sans autorisation.</li>
+            </ul>
+            <button onclick="fermerRegles()">Fermer</button>
+        </div>
+
+        <!-- Bouton existant -->
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScJOJa170GUiIeh7Jv6-Lkg-cT0SwTEcPnkQzy7pZk1d91hdA/viewform?usp=header" target="_blank">
             <button>Participer au projet !</button>
         </a>
-        <h2>                                                                              </h2>
-        <!-- Lien vers le formulaire Google Forms -->
     </section>
 
     <section class="publicite">
         <img src="DALL·E-2025-02-26-18.40.07-A-vibrant-split-screen-image-of-a-Roblox-obby.png" alt="CSRG Community" class="logo obby">
-        <h2>Découvrez mon jeu Roblox !
-        Il s'appelle obby easy/average/hard.</h2>
+        <h2>Découvrez mon jeu Roblox ! Il s'appelle obby easy/average/hard.</h2>
         <p>Testez mon obby en cliquant ici :</p>
         <a href="https://www.roblox.com/fr/games/17819987677/Obby-easy-to-almost-impossible-and-troll" target="_blank">
             🔗 Jouer à mon jeu Roblox
         </a>
         <p>(Téléchargez Roblox avant de cliquer sur ce lien)</p>
     </section>
-    <p>Dévoloppé par : Patostef2013 ( pseudo roblox )</p>
-    <p>                  </p>
+    <p>Développé par : Patostef2013 (pseudo roblox)</p>
+    
     <footer>
         <p>© 2025 CSRG Community</p>
     </footer>
+
+    <script>
+        // JavaScript pour gérer l'ouverture et la fermeture de la fenêtre modale
+        function ouvrirRegles() {
+            document.getElementById('fenetreRegles').style.display = 'block';
+        }
+
+        function fermerRegles() {
+            document.getElementById('fenetreRegles').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
