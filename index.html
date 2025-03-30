@@ -6,7 +6,6 @@
     <title>CSRG Community</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Boutons verts et rouges */
         .btn-green {
             background-color: green;
             color: white;
@@ -26,7 +25,6 @@
             right: 10px;
         }
 
-        /* Fenêtre modale */
         #fenetreJeux, #fenetreRegles {
             display: none;
             position: fixed;
@@ -42,7 +40,6 @@
             max-width: 500px;
         }
 
-        /* Barre de recherche */
         #rechercheJeux {
             width: 100%;
             padding: 10px;
@@ -51,10 +48,9 @@
 
         .jeu {
             margin: 10px 0;
-            display: none; /* Les jeux ne s'affichent pas par défaut */
+            display: none;
         }
 
-        /* Texte noir pour les règles et les jeux */
         .text-black {
             color: black;
         }
@@ -67,50 +63,37 @@
     </header>
 
     <section class="fonctionnement">
-        <h2 class="text-black">Comment fonctionne CSRG Community ? (lisez ! (important !))</h2>
+        <h2 class="text-black">Comment fonctionne CSRG Community ? (lisez ! C'est important !)</h2>
         <p class="text-black">CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
-        Vous pouvez participer au projet en vous inscrivant ci-dessous.
-        Nous vous enverrons un mail grâce à l'adresse mail que vous nous fournissez. Si vous n'avez pas d'adresse mail, mettez votre numéro de téléphone dans la case adresse email. 
-        ⚠ Pour éviter tout malentendu, sachez que CSRG est une mini-marque. Ne cherchez pas un groupe Roblox s'appelant CSRG Community ! 
-        ⚠ Pour la sécurié de votre jeu , pensez toujours à enregistrer une copie !! ⚠
-        </p>
+        Vous pouvez participer au projet en vous inscrivant ci-dessous.</p>
     </section>
     
     <h2 class="text-black">⚠ Attention ! Vous devez disposer d'un ordinateur et de chez vous pour installer Roblox et Roblox Studio.</h2>
 
     <section class="inscription">
         <h2 class="text-black">Inscrivez-vous au projet !</h2>
-        
-        <!-- Bouton pour ouvrir les règles -->
         <button onclick="ouvrirRegles()">Règles de CSRG Community</button>
-
-        <!-- Fenêtre modale pour les règles -->
         <div id="fenetreRegles">
             <button class="btn-red" onclick="fermerRegles()">Fermer</button>
             <h2 class="text-black">Règles et informations de CSRG Community</h2>
             <h4 class="text-black">1- Nous déclinons toute responsabilité si votre jeu contient un contenu illégal et que nous n'en sommes pas informés.</h4>
             <h4 class="text-black">2- Vous restez propriétaires de votre jeu et vous gardez tout les robux pour vous , à part si vous voulez nous faire un don.</h4> 
-            <h4 class="text-black">3- Quand votre jeu sera publié , nous le promouvrons en faisant une vidéo dans laquelle nous découvrirons votre jeu , et essaierons de le terminer , si c'est un obby , un tycoon etc... sur la chaîne youtube @csrgcommunityrobloxgames !</h4>    
-            <h4 class="text-black">4- Envoyez nous un mail si vous voulez faire partie des scripters , des builders , des mentors , des développeurs ou encore des consultants ! Si vous voulez être dans une de ces catégories , sachez qu'il faudra aider les autres , si ils demandent de l'aide.</h4>
+            <h4 class="text-black">3- Quand votre jeu sera publié , nous le promouvrons en faisant une vidéo dans laquelle nous découvrirons votre jeu.</h4>    
+            <h4 class="text-black">4- Envoyez-nous un mail si vous voulez participer en tant que scripters, builders, mentors, etc.</h4>
         </div>
-
-        <!-- Bouton pour participer au projet -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGuRAKkaBWl8Vtv0znRH2XgD6Ei_swqiWMSt6bq9IrTHvfUA/viewform?usp=header" target="_blank">
+        <a href="https://docs.google.com/forms" target="_blank">
             <button>Participer au projet !</button>
         </a>
     </section>
 
     <section class="jeux-crees">
-        <!-- Bouton pour ouvrir les jeux créés -->
         <button class="btn-green" onclick="ouvrirJeux()">Voir les jeux créés</button>
-
-        <!-- Fenêtre modale pour les jeux créés -->
         <div id="fenetreJeux">
             <button class="btn-red" onclick="fermerJeux()">Fermer</button>
             <h2 class="text-black">Jeux créés par CSRG Community</h2>
             <input type="text" id="rechercheJeux" placeholder="Rechercher un jeu...">
             <div id="listeJeux">
-                <div class="jeu" data-nom="obby">
+                <div class="jeu" data-nom="obby easy/average/hard">
                     <img src="DALL·E-2025-02-26-18.40.07-A-vibrant-split-screen-image-of-a-Roblox-obby.png" alt="Obby easy/average/hard" class="logo obby" style="width: 100%; max-width: 300px;">
                     <h3 class="text-black">Obby easy/average/hard</h3>
                     <a href="https://www.roblox.com/fr/games/17819987677/Obby-easy-to-almost-impossible-and-troll" target="_blank">
@@ -126,7 +109,6 @@
     </footer>
 
     <script>
-        // Ouvrir et fermer les fenêtres modales
         function ouvrirRegles() {
             document.getElementById('fenetreRegles').style.display = 'block';
         }
@@ -143,12 +125,13 @@
             document.getElementById('fenetreJeux').style.display = 'none';
         }
 
-        // Recherche de jeux
+        // Recherche stricte : l'obby apparaît uniquement si tous les caractères correspondent
         document.getElementById('rechercheJeux').addEventListener('input', function() {
             const recherche = this.value.toLowerCase();
             const jeux = document.querySelectorAll('.jeu');
             jeux.forEach(jeu => {
                 const nom = jeu.getAttribute('data-nom').toLowerCase();
+                // Vérifie si le nom contient exactement la recherche
                 jeu.style.display = nom.includes(recherche) ? 'block' : 'none';
             });
         });
