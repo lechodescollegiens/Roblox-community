@@ -63,9 +63,14 @@
     </header>
 
     <section class="fonctionnement">
-        <h2 class="text-black">Comment fonctionne CSRG Community ? (lisez ! C'est important !)</h2>
-        <p class="text-black">CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
-        Vous pouvez participer au projet en vous inscrivant ci-dessous.</p>
+        <h2 class="text-black">Comment fonctionne CSRG Community ? (lisez ! (important !))</h2>
+        <p class="text-black">
+            CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
+            Vous pouvez participer au projet en vous inscrivant ci-dessous.
+            Nous vous enverrons un mail grâce à l'adresse mail que vous nous fournissez. Si vous n'avez pas d'adresse mail, mettez votre numéro de téléphone dans la case adresse email. 
+            ⚠ Pour éviter tout malentendu, sachez que CSRG est une mini-marque. Ne cherchez pas un groupe Roblox s'appelant CSRG Community ! 
+            ⚠ Pour la sécurité de votre jeu, pensez toujours à enregistrer une copie !! ⚠
+        </p>
     </section>
     
     <h2 class="text-black">⚠ Attention ! Vous devez disposer d'un ordinateur et de chez vous pour installer Roblox et Roblox Studio.</h2>
@@ -131,7 +136,6 @@
             const jeux = document.querySelectorAll('.jeu');
             jeux.forEach(jeu => {
                 const nom = jeu.getAttribute('data-nom').toLowerCase();
-                // Vérifie si le nom contient exactement la recherche
                 jeu.style.display = nom.includes(recherche) ? 'block' : 'none';
             });
         });
