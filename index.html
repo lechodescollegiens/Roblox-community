@@ -6,7 +6,7 @@
     <title>CSRG Community</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Styles des boutons verts et rouges */
+        /* Boutons verts et rouges */
         .btn-green {
             background-color: green;
             color: white;
@@ -41,7 +41,7 @@
             width: 80%;
             max-width: 500px;
         }
-        
+
         /* Barre de recherche */
         #rechercheJeux {
             width: 100%;
@@ -51,18 +51,24 @@
 
         .jeu {
             margin: 10px 0;
+            display: none; /* Les jeux ne s'affichent pas par défaut */
+        }
+
+        /* Texte noir pour les règles et les jeux */
+        .text-black {
+            color: black;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="logo mini marque roblox terminé.png" alt="CSRG Community" class="logo">
-        <h1>Bienvenue sur CSRG Community !</h1>
+        <h1 class="text-black">Bienvenue sur CSRG Community !</h1>
     </header>
 
     <section class="fonctionnement">
-        <h2>Comment fonctionne CSRG Community ? (lisez ! (important !))</h2>
-        <p>CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
+        <h2 class="text-black">Comment fonctionne CSRG Community ? (lisez ! (important !))</h2>
+        <p class="text-black">CSRG Community est une communauté qui crée, code et partage des jeux Roblox.
         Vous pouvez participer au projet en vous inscrivant ci-dessous.
         Nous vous enverrons un mail grâce à l'adresse mail que vous nous fournissez. Si vous n'avez pas d'adresse mail, mettez votre numéro de téléphone dans la case adresse email. 
         ⚠ Pour éviter tout malentendu, sachez que CSRG est une mini-marque. Ne cherchez pas un groupe Roblox s'appelant CSRG Community ! 
@@ -70,10 +76,10 @@
         </p>
     </section>
     
-    <h2>⚠ Attention ! Vous devez disposer d'un ordinateur et de chez vous pour installer Roblox et Roblox Studio.</h2>
+    <h2 class="text-black">⚠ Attention ! Vous devez disposer d'un ordinateur et de chez vous pour installer Roblox et Roblox Studio.</h2>
 
     <section class="inscription">
-        <h2>Inscrivez-vous au projet !</h2>
+        <h2 class="text-black">Inscrivez-vous au projet !</h2>
         
         <!-- Bouton pour ouvrir les règles -->
         <button onclick="ouvrirRegles()">Règles de CSRG Community</button>
@@ -81,11 +87,11 @@
         <!-- Fenêtre modale pour les règles -->
         <div id="fenetreRegles">
             <button class="btn-red" onclick="fermerRegles()">Fermer</button>
-            <h2 class="bleu">Règles et informations de CSRG Community</h2>
-            <h4 class="bleu">1- Nous déclinons toute responsabilité si votre jeu contient un contenu illégal et que nous n'en sommes pas informés.</h4>
-            <h4 class="bleu">2- Vous restez propriétaires de votre jeu et vous gardez tout les robux pour vous , à part si vous voulez nous faire un don.</h4> 
-            <h4 class="bleu">3- Quand votre jeu sera publié , nous le promouvrons en faisant une vidéo dans laquelle nous découvrirons votre jeu , et essaierons de le terminer , si c'est un obby , un tycoon etc... sur la chaîne youtube @csrgcommunityrobloxgames !</h4>    
-            <h4 class="bleu">4- Envoyez nous un mail si vous voulez faire partie des scripters , des builders , des mentors , des développeurs ou encore des consultants ! Si vous voulez être dans une de ces catégories , sachez qu'il faudra aider les autres , si ils demandent de l'aide.</h4>
+            <h2 class="text-black">Règles et informations de CSRG Community</h2>
+            <h4 class="text-black">1- Nous déclinons toute responsabilité si votre jeu contient un contenu illégal et que nous n'en sommes pas informés.</h4>
+            <h4 class="text-black">2- Vous restez propriétaires de votre jeu et vous gardez tout les robux pour vous , à part si vous voulez nous faire un don.</h4> 
+            <h4 class="text-black">3- Quand votre jeu sera publié , nous le promouvrons en faisant une vidéo dans laquelle nous découvrirons votre jeu , et essaierons de le terminer , si c'est un obby , un tycoon etc... sur la chaîne youtube @csrgcommunityrobloxgames !</h4>    
+            <h4 class="text-black">4- Envoyez nous un mail si vous voulez faire partie des scripters , des builders , des mentors , des développeurs ou encore des consultants ! Si vous voulez être dans une de ces catégories , sachez qu'il faudra aider les autres , si ils demandent de l'aide.</h4>
         </div>
 
         <!-- Bouton pour participer au projet -->
@@ -101,23 +107,22 @@
         <!-- Fenêtre modale pour les jeux créés -->
         <div id="fenetreJeux">
             <button class="btn-red" onclick="fermerJeux()">Fermer</button>
-            <h2>Jeux créés par CSRG Community</h2>
+            <h2 class="text-black">Jeux créés par CSRG Community</h2>
             <input type="text" id="rechercheJeux" placeholder="Rechercher un jeu...">
             <div id="listeJeux">
                 <div class="jeu" data-nom="obby">
                     <img src="DALL·E-2025-02-26-18.40.07-A-vibrant-split-screen-image-of-a-Roblox-obby.png" alt="Obby easy/average/hard" class="logo obby" style="width: 100%; max-width: 300px;">
-                    <h3>Obby easy/average/hard</h3>
+                    <h3 class="text-black">Obby easy/average/hard</h3>
                     <a href="https://www.roblox.com/fr/games/17819987677/Obby-easy-to-almost-impossible-and-troll" target="_blank">
                         <button class="btn-green">Jouer</button>
                     </a>
                 </div>
-                <!-- Ajoutez d'autres jeux ici -->
             </div>
         </div>
     </section>
     
     <footer>
-        <p>© 2025 CSRG Community</p>
+        <p class="text-black">© 2025 CSRG Community</p>
     </footer>
 
     <script>
