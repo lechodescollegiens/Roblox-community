@@ -34,13 +34,9 @@
         <div id="fenetreRegles" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: blue; padding: 20px; border: 1px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
             <h2 class="bleu">Règles et informations de CSRG Community</h2>
             <h4 class="bleu">1- Nous déclinons toute responsabilité si votre jeu contient un contenu illégal et que nous n'en sommes pas informés.</h4>
-			<h4 class="bleu">
-            <h4 class="bleu">2- Vous restez propriétaires de votre jeu et vous gardez tout les robux pour vous , à part si vous voulez nous faire un don.</h4> 
-            <h4 class="bleu">
+            <h4 class="bleu">2- Vous restez propriétaires de votre jeu et vous gardez tout les robux pour vous , à part si vous voulez nous faire un don.</h4>
             <h4 class="bleu">3- Quand votre jeu sera publié , nous le promouvrons en faisant une vidéo dans laquelle nous découvrirons  votre jeu , et essaierons de le terminer , si c'est un obby , un tycoon etc... sur la chaîne youtube @csrgcommunityrobloxgames ! </h4>    
-            <h4 class="bleu">
             <h4 class="bleu">4- envoyez nous un mails si vous voulez faire partie des scripters , des builders , des mentors , des développeurs ou encore des consultants ! Si vous voulez être dans une de ces catégories , sachez qu'il faudrat aider les autres , si ils demandent de l'aide .</h4>
-            <h4 class="bleu">
             <button onclick="fermerRegles()">Fermer</button>
         </div>
 
@@ -50,29 +46,44 @@
         </a>
     </section>
 
-    <section class="publicite">
-        <img src="DALL·E-2025-02-26-18.40.07-A-vibrant-split-screen-image-of-a-Roblox-obby.png" alt="CSRG Community" class="logo obby">
-        <h2>Découvrez mon jeu Roblox ! Il s'appelle obby easy/average/hard.</h2>
-        <p>Testez mon obby en cliquant ici :</p>
-        <a href="https://www.roblox.com/fr/games/17819987677/Obby-easy-to-almost-impossible-and-troll" target="_blank">
-            🔗 Jouer à mon jeu Roblox
-        </a>
-        <p>(Téléchargez Roblox avant de cliquer sur ce lien)</p>
+    <section class="jeux-crees">
+        <!-- Bouton pour ouvrir les jeux créés -->
+        <button onclick="ouvrirJeux()">Voir les jeux créés</button>
+
+        <!-- Fenêtre modale pour les jeux créés -->
+        <div id="fenetreJeux" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; border: 1px solid black; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
+            <h2>Jeux créés par CSRG Community</h2>
+            <div class="jeu">
+                <img src="DALL·E-2025-02-26-18.40.07-A-vibrant-split-screen-image-of-a-Roblox-obby.png" alt="Obby easy/average/hard" class="logo obby">
+                <h3>Obby easy/average/hard</h3>
+                <a href="https://www.roblox.com/fr/games/17819987677/Obby-easy-to-almost-impossible-and-troll" target="_blank">
+                    <button>Jouer</button>
+                </a>
+            </div>
+            <button onclick="fermerJeux()">Fermer</button>
+        </div>
     </section>
-    <p>Développé par : Patostef2013 (pseudo roblox)</p>
     
     <footer>
         <p>© 2025 CSRG Community</p>
     </footer>
 
     <script>
-        // JavaScript pour gérer l'ouverture et la fermeture de la fenêtre modale
+        // JavaScript pour gérer l'ouverture et la fermeture des fenêtres modales
         function ouvrirRegles() {
             document.getElementById('fenetreRegles').style.display = 'block';
         }
 
         function fermerRegles() {
             document.getElementById('fenetreRegles').style.display = 'none';
+        }
+
+        function ouvrirJeux() {
+            document.getElementById('fenetreJeux').style.display = 'block';
+        }
+
+        function fermerJeux() {
+            document.getElementById('fenetreJeux').style.display = 'none';
         }
     </script>
 </body>
